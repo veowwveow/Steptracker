@@ -1,4 +1,6 @@
 public class MonthData {
+    // Yellow
+    // При создании массива рекомендуется квадратные скобки ставить у типа, а не у названия
     int days[] = new int[30];
 
     void printDaysAndStepsFromMonth() {
@@ -25,6 +27,8 @@ public class MonthData {
         return maxSteps;
     }
 
+    // Green
+    // Очень здорово! Метод при любых ситуациях отрабатывает корректно, умница!
     int bestSeries(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;

@@ -25,6 +25,9 @@ public class Main {
         }
     }
 
+    // Yellow
+    // Не выполняется стандарт lowerCamelCase
+    // Каждое новое слово в названии метода должно начинаться с большой буквы
     static void printmenu() {
         System.out.println("Введите команду:");
         System.out.println("1 - Ввести количество шагов за определенный день");

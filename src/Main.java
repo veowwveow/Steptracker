@@ -6,7 +6,7 @@ public class Main {
         StepTracker stepTracker = new StepTracker(scanner);
 
         while (true) {
-            printmenu();
+            printMenu();
 
             int command = scanner.nextInt();
             if (command == 1) {
@@ -25,10 +25,7 @@ public class Main {
         }
     }
 
-    // Yellow
-    // Не выполняется стандарт lowerCamelCase
-    // Каждое новое слово в названии метода должно начинаться с большой буквы
-    static void printmenu() {
+    static void printMenu() {
         System.out.println("Введите команду:");
         System.out.println("1 - Ввести количество шагов за определенный день");
         System.out.println("2 - Изменить цель по количеству шагов в день");

@@ -1,7 +1,7 @@
 public class MonthData {
     // Yellow
     // При создании массива рекомендуется квадратные скобки ставить у типа, а не у названия
-    int days[] = new int[30];
+    int[] days = new int[30];
 
     void printDaysAndStepsFromMonth() {
         for (int i = 0; i < days.length; i++) {

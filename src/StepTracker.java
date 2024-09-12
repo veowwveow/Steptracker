@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class StepTracker {
-    // Red
-    // Неиспользуемые поля необходимо удалять
-    MonthData monthData = new MonthData();
+    int goalByStepTracker = 10000;
     Converter converter = new Converter();
     Scanner scanner;
     MonthData[] monthToData = new MonthData[12];
@@ -14,11 +12,7 @@ public class StepTracker {
             monthToData[i] = new MonthData();
         }
     }
-    // Yellow
-    // Есть негласное соглашение, что сначала идут все поля
-    // Потом конструктор, а потом все остальные методы
-    // Поэтому это поле я бы рекомендовал перенести наверх
-    int goalByStepTracker = 10000;
+
     void changeStepGoal() {
         System.out.println("Введите новую цель");
         int newGoal = scanner.nextInt();
@@ -88,22 +82,10 @@ public class StepTracker {
         System.out.println("Статистика за месяц:");
         monthData.printDaysAndStepsFromMonth();
         System.out.println("Общее количество шагов за месяц: " + sumSteps);
-        // Red
-        // Метод вызван просто так. Он возвращает значение в пустоту
-        monthData.maxSteps();
         System.out.println("Максимальное количество шагов за месяц: " + monthData.maxSteps());
         System.out.println("Среднее количество шагов в день: " + sumSteps / 30);
-        // Red
-        // Метод вызван просто так. Он возвращает значение в пустоту
-        converter.convertToKm(sumSteps);
         System.out.println("Пройденная дистанция (в км): " + converter.convertToKm(sumSteps));
-        // Red
-        // Метод вызван просто так. Он возвращает значение в пустоту
-        converter.convertStepsToKilocalories(sumSteps);
         System.out.println("Количество сожжённых килокалорий: " + converter.convertStepsToKilocalories(sumSteps));
-        // Red
-        // Метод вызван просто так. Он возвращает значение в пустоту
-        monthData.bestSeries(goalByStepTracker);
         System.out.println("Лучшая серия: " + monthData.bestSeries(goalByStepTracker));
         System.out.println();
     }
